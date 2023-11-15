@@ -35,8 +35,9 @@ class MainActivity : AppCompatActivity() {
                 while (albumList.hasNext()){
                     val albumItem = albumList.next()
 
-                    val albumTitle = "Album Tittle ; ${albumItem.title} \n"
-                    binding.titleTextView.append(albumTitle)
+                    val albumInfo =
+                        "Album ID: ${albumItem.id}\nUser ID: ${albumItem.userId}\nTitle: ${albumItem.title}\n\n"
+                    binding.titleTextView.append(albumInfo)
                 }
             }
         })
